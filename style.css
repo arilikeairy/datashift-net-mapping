@@ -1,0 +1,69 @@
+/*
+ Theme Name:   Enfold Child
+ Description:  Enfold Child Theme
+ Author:       Ari Sahagun
+ Author URI:   http://arilikeairy.org
+ Template:     enfold
+ Version:      1.0.0
+ Text Domain:  enfold-child
+*/
+
+@import url("http://datashift.zardtech.com/wp-content/uploads/dynamic_avia/enfold.css");
+
+/* changes specific to network visualization pages */
+body.page-template-d3map-continents, body.page-template-d3map-continents-php, body.page-template-d3map-labeled, body.page-template-d3map-labeled-php, body.page-template-d3map-focusareasonly, body.page-template-d3map-focusareasonly-php { background: rgba(255, 255, 255, 1); }
+
+body.page-template-d3map-continents .title_container .breadcrumb,
+body.page-template-d3map-labeled .title_container .breadcrumb,
+body.page-template-d3map-focusareasonly .title_container .breadcrumb
+{ z-index: 10; line-height: 15px; font-size: 11px; position: relative; top: -40px; margin-top: -7px; float: right; }
+
+body.page-template-d3map-continents h1.main-title,
+body.page-template-d3map-labeled h1.main-title ,
+body.page-template-d3map-focusareasonly h1.main-title
+{ width: 100%; clear: both; display: block; positioN: relative; top: 35px; padding-bottom: 25px; padding-top: 10px; }
+
+svg { border: 1px solid #ccc; display: block; margin: auto; margin-bottom: 35px; }
+
+/* map legends */
+ul.key { list-style-type: disc; line-height: .6}
+ul.key li { font-size: 25pt; }
+ul.key li span { font-size: 16px; }
+.legend { width: 960px; margin: 0 35px; }
+div.key { font-size: 16px; border: 1px solid #ccc; display: block; max-width: 500px; float: right; width: 50%; padding: 10px; background: #fafafa; }
+.key button { background-color: #CA2845; color: #FFF; border-color: #A80623; padding: 9px 22px; cursor: pointer; border: medium none; border-radius: 0px; }
+.key button:hover { background-color: #5CA670; color: #FFF; border-color: #3A8450; }
+.infobox { width: 50%; float: left; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; }
+.infobox span { font-weight: bold; }
+
+body.page-template-d3map-continents .initiative, body.page-template-d3map-labeled .initiative, body.page-template-d3map-focusareasonly .initiative { color: #1F77B4; fill: #1F77B4; }
+body.page-template-d3map-continents .sdg, body.page-template-d3map-labeled .sdg, body.page-template-d3map-focusareasonly .sdg { color: #FF7F0E; fill: #FF7F0E; }
+body.page-template-d3map-continents .focusarea, body.page-template-d3map-labeled .focusarea, body.page-template-d3map-focusareasonly .focusarea { color: #2CA02C; fill: #2CA02C; }
+
+.node { stroke: #000; stroke-width: 0; fill-opacity: 0.9; }
+circle { stroke: #000; stroke-width: .6; }
+text, text.focusarea, text.initiative, text.sdg { fill: #000; font-size: 10pt; }
+body.page-template-d3map-labeled  text { font-size: 11pt; font-weight: bold; }
+text.sdg { fill: #444; font-size: 9pt; }
+.link { stroke: #999; stroke-opacity: .6; }
+.infobox rect{ opacity: .5; fill: #F8D9D9; stroke: #815959; stroke-width: 0.25px;}
+.infobox text{ fill: #4E1313; stroke: #815959; stroke-width: 0.25px; font-weight: 100 !important; }
+.d3-tip { line-height: 1; color: black; background: rgba(155,155,155,.5); padding: 10px; }
+.node.hovered { stroke:#E72E3D;  stroke-opacity: 1; stroke-width:3}
+
+/* submit your own initiative form, roughly matching  contact form style */
+.page-template-initiative-form .post-entry { max-width: 600px; margin: auto; }
+.page-template-initiative-form .error { border: 1px solid #F00; background: #FFC0CB; padding: 5px; display: inline-block; }
+form.submit-your-initiative { background: #0892D1; padding: 20px; }
+form.submit-your-initiative button {font-family: inherit; font-size: 18px; background: red none repeat scroll 0% 0%; border-radius: 5px; border: 0px none; padding: 10px; margin-bottom: 10px;}
+
+
+/* initiatives archive page */
+.initiative-archive a[rel="tag"]:before { content: "//"; }
+.initiative-archive span.text-sep.text-sep-cat, .initiative-archive .date-container.minor-meta.updated, .initiative-archive span.text-sep.text-sep-date, .initiative-archive span.blog-author.minor-meta { display: none; }
+.initiative-archive span.blog-categories.minor-meta { color: white; }
+.initiative-archive .post_delimiter { padding: 0px; border-bottom: 1px solid rgb(204, 204, 204);}
+.template-blog.initiatives-archive .post_delimiter { padding: 0px; margin-bottom: 25px; border-bottom: 1px solid gray; }
+
+/* single initiatives page */
+.template-single-initiative .entry-content-wrapper { font-size: 17px; }
